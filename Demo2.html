@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type= "text/css" href="Style2.css">
+</head>
+<body>
+
+
+<button class="tablink" onclick="openPage('Home', this, 'blue')">Home</button>
+<button class="tablink" onclick="openPage('News', this, 'red')" id="defaultOpen">News</button>
+
+<div class="gcse-search"></div>
+
+<div id="Home" class="tabcontent">
+ 	<h3>Home</h3>
+  	<p>Home is where the heart is..</p>
+  	<script async src="https://cse.google.com/cse.js?cx=005899162259879245287:mppesf0niki"></script>
+  	<div class="gcse-searchresults-only"></div>
+</div>
+
+
+<div id="News" class="tabcontent">
+  	<h3>News</h3>
+  	<p>Some news this fine day!</p>
+  	<script async src="https://cse.google.com/cse.js?cx=005899162259879245287:tekqrcnfjqk"></script>
+<div class="gcse-searchresults-only"></div>
+</div>
+
+<script type="text/javascript">
+	function openPage(pageName, elmnt, color) {
+  // Hide all elements with class="tabcontent" by default */
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Remove the background color of all tablinks/buttons
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+
+  // Show the specific tab content
+  document.getElementById(pageName).style.display = "block";
+
+  // Add the specific color to the button used to open the tab content
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+<body>
+<!DOCTYPE html>
+<html>
